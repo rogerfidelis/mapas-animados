@@ -19,6 +19,10 @@ a {
     transition: 0.3s;
 }
 
+a:hover {
+    color: #1CA3EC;
+}
+
 
 
 
@@ -47,9 +51,20 @@ li a {
     border-radius:10px;
 }
 
+p {
+
+    max-width: 990px;
+    margin: 30px auto;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 18px;
+
+}
+
 .container{
     width:90%;
     max-width:1400px;
     margin:auto;
+    padding-left: 40px;
 
 }
