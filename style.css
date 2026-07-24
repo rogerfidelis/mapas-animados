@@ -1,0 +1,55 @@
+body{
+
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0B1F3A;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url("offshore-pg-bn.png");
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.banner h1 {
+    color:white;
+    font-size:42px;
+    text-align:center;
+    letter-spacing:2px;
+    padding:20px 40px;
+    border-radius:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+
+}
