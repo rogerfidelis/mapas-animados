@@ -68,3 +68,91 @@ p {
     padding-left: 40px;
 
 }
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin:40px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    background:#123A63;
+
+    width:120px;
+
+    height:90px;
+
+    border-radius:12px;
+
+    display: flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.30);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 20px rgba(28,163,236,.35);
+
+}
+
+.card h2{
+
+    color:#1CA3EC;
+
+    font-size:38px;
+
+    margin:0;
+
+}
+
+.card p{
+
+    margin-top:12px;
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+}
+
+.card-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.card-title{
+
+    margin-top:12px;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:15px;
+
+    line-height:1.3;
+
+}

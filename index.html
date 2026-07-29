@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+
 <body>
     <div class="container">
     
@@ -16,8 +18,37 @@
             Seja bem-vindo a plataforma de monitoramento de embarcações de apoio marítimo utilizando dados AIS. Os links abaixo te conectam a uma visualização georeferenciada das embarcações tipo MPOV (Multi propose Offshore Vessel) com suas respectivas rotas; sinalizando os atendimentos nas bacias de Campos e Santos à operações de produção de FPSOs e campanhas de exploração de óleo e gás em navios sonda e plataformas semi-submerssíveis.
         </p>
 
-        
+        <section class="cards">
+            <div class="card-container">
+                <div class="card">
+                    <h2 class="contador" data-target="4218">0</h2>
+                </div>    
+                <p>KMs de trajetória<br>analisada</p>
+            </div>
 
+            <div class="card-container">
+                <div class="card">
+                    <h2 class="contador" data-target="18">0</h2>
+                </div>
+                <p>Campos<br>monitorados</p>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <h2 class="contador" data-target="3">0</h2>
+                </div>
+                <p>Empresas<br>monitoradas</p>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <h2 class="contador" data-target="53">0</h2>
+                </div>
+                <p>PSVs<br>monitoradas</p>
+            </div>
+
+        </section>
+  
         <h2>CBO</h2>
 
         <ul>
@@ -90,6 +121,43 @@
         </ul>
 
     </div>
+
+<script>
+
+const counters = document.querySelectorAll(".contador");
+
+counters.forEach(counter => {
+
+    const target = parseInt(counter.dataset.target);
+
+    let current = 0;
+
+    const increment = Math.max(1, Math.ceil(target / 80));
+
+    function update(){
+
+        current += increment;
+
+        if(current >= target){
+
+            counter.innerText = target.toLocaleString("pt-BR");
+
+        }else{
+
+            counter.innerText = current.toLocaleString("pt-BR");
+
+            requestAnimationFrame(update);
+
+        }
+
+    }
+
+    update();
+
+});
+
+</script>
+
 </body>
 
 </html>
