@@ -1,5 +1,5 @@
 const ESTATISTICAS = {
-    km: 51482.59,
+    km: 35622.05,
     empresas: 3,
     psvs: 53,
     campos: 18

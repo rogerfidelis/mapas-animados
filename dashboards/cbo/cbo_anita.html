@@ -17,19 +17,66 @@ body{
     font-family:Arial;
 }
 
+/* =========================
+   CABEÇALHO
+   ========================= */
+
 header{
+
+    height:80px;
 
     background:#08192f;
     color:white;
 
-    padding:18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    font-size:28px;
+    padding:8px 25px;
 
+    box-sizing:border-box;
+
+    border-bottom:2px solid #1CA3EC;
+}
+
+.home-button{
+
+    display:block;
+
+    height:55px;
+    width:55px;
+
+    text-decoration:none;
+
+    position:relative;
+
+    z-index:99999;
+
+}
+
+.home-button img{
+
+    height:100%;
+    width:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+.vessel{
+
+    color:white;
+
+    font-size:18px;
     font-weight:bold;
 
-    text-align:center;
 }
+
+/* =========================
+   CONTEÚDO
+   ========================= */
 
 section{
 
@@ -41,7 +88,6 @@ section{
 iframe{
 
     width:100%;
-
     border:none;
 }
 
@@ -57,7 +103,6 @@ iframe{
     gap:20px;
 
     margin-top:30px;
-
 }
 
 #grafico_status{
@@ -65,7 +110,6 @@ iframe{
     flex:1;
 
     height:550px;
-
 }
 
 #grafico_deslocamento{
@@ -73,12 +117,40 @@ iframe{
     flex:2;
 
     height:550px;
-
 }
 
-/* RESPONSIVO */
+/* =========================
+   RESPONSIVO
+   ========================= */
 
 @media (max-width:900px){
+
+    header{
+
+        height:auto;
+
+        padding:12px 15px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:5px;
+
+    }
+
+    .home-button{
+
+    height:55px;
+    width:55px;
+
+    }   
+
+    .vessel{
+
+        font-size:16px;
+
+    }
 
     .graficos{
 
@@ -103,6 +175,22 @@ iframe{
 <body>
 
 
+<header>
+
+    <a href="https://rogerfidelis.github.io/ofi/index.html" class="home-button">
+
+        <img src="../../imagens/logo_ofi.png" alt="OFI">
+
+    </a>
+
+    <div class="vessel">
+
+        cbo anita
+
+    </div>
+
+</header>
+
 
 <section>
 
@@ -110,6 +198,7 @@ iframe{
     id="mapa"
     src="../../mapas/cbo/cbo_anita.html">
     </iframe>
+
 
     <div class="graficos">
 
@@ -124,4 +213,10 @@ iframe{
         </iframe>
 
     </div>
+
 </section>
+
+
+</body>
+
+</html>
