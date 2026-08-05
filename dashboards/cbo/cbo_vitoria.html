@@ -37,29 +37,23 @@ header{
     box-sizing:border-box;
 
     border-bottom:2px solid #1CA3EC;
+
 }
 
 .home-button{
 
     display:block;
 
-    height:55px;
-    width:55px;
+    height:65px;
 
-    text-decoration:none;
-
-    position:relative;
-
-    z-index:99999;
+    width:auto;
 
 }
 
 .home-button img{
 
     height:100%;
-    width:100%;
-
-    object-fit:contain;
+    width:auto;
 
     display:block;
 
@@ -74,6 +68,7 @@ header{
 
 }
 
+
 /* =========================
    CONTEÚDO
    ========================= */
@@ -83,41 +78,94 @@ section{
     width:95%;
 
     margin:20px auto;
+
 }
 
-iframe{
 
-    width:100%;
-    border:none;
-}
+/* =========================
+   PRIMEIRA LINHA
+   MAPA + INDICADORES
+   ========================= */
 
-#mapa{
+.painel-superior{
 
-    height:550px;
-}
+    display:grid;
 
-.graficos{
-
-    display:flex;
+    grid-template-columns:3fr 1fr;
 
     gap:20px;
 
+}
+
+
+/* =========================
+   MAPA
+   ========================= */
+
+#mapa{
+
+    width:100%;
+
+    height:750px;
+
+    border:none;
+
+}
+
+
+/* =========================
+   INDICADORES LATERAIS
+   ========================= */
+
+.indicadores{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+.indicadores iframe{
+
+    width:100%;
+
+    height:365px;
+
+    border:none;
+
+}
+
+
+/* =========================
+   GRÁFICOS INFERIORES
+   ========================= */
+
+.graficos-inferiores{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
     margin-top:30px;
+
 }
 
-#grafico_status{
 
-    flex:1;
+.graficos-inferiores iframe{
+
+    width:100%;
 
     height:550px;
+
+    border:none;
+
 }
 
-#grafico_deslocamento{
-
-    flex:2;
-
-    height:550px;
-}
 
 /* =========================
    RESPONSIVO
@@ -141,10 +189,9 @@ iframe{
 
     .home-button{
 
-    height:55px;
-    width:55px;
+        height:50px;
 
-    }   
+    }
 
     .vessel{
 
@@ -152,16 +199,30 @@ iframe{
 
     }
 
-    .graficos{
 
-        flex-direction:column;
+    .painel-superior{
+
+        grid-template-columns:1fr;
 
     }
 
-    #grafico_status,
-    #grafico_deslocamento{
 
-        width:100%;
+    #mapa{
+
+        height:550px;
+
+    }
+
+
+    .indicadores iframe{
+
+        height:500px;
+
+    }
+
+
+    .graficos-inferiores iframe{
+
         height:500px;
 
     }
@@ -171,6 +232,7 @@ iframe{
 </style>
 
 </head>
+
 
 <body>
 
@@ -194,25 +256,68 @@ iframe{
 
 <section>
 
-    <iframe
-    id="mapa"
-    src="../../mapas/cbo/cbo_vitoria.html">
-    </iframe>
+
+    <!-- =========================
+         MAPA + INDICADORES
+         ========================= -->
+
+    <div class="painel-superior">
 
 
-    <div class="graficos">
-
-        <iframe
-        id="grafico_status"
-        src="../../graficos/status_navegacao/cbo/cbo_vitoria.html">
-        </iframe>
+        <!-- MAPA -->
 
         <iframe
-        id="grafico_deslocamento"
-        src="../../graficos/distancia/cbo/cbo_vitoria.html">
+            id="mapa"
+            src="../../mapas/cbo/cbo_vitoria.html">
         </iframe>
+
+
+        <!-- INDICADORES -->
+
+        <div class="indicadores">
+
+            <iframe
+                id="grafico_status"
+                src="../../graficos/status_navegacao/cbo/cbo_vitoria.html">
+            </iframe>
+
+
+            <iframe
+                id="grafico_atendimento"
+                src="../../graficos/campo_atendimento/cbo/cbo_vitoria.html">
+            </iframe>
+
+        </div>
 
     </div>
+
+
+
+    <!-- =========================
+         GRÁFICOS DE DISTÂNCIA
+         ========================= -->
+
+    <div class="graficos-inferiores">
+
+
+        <!-- DISTÂNCIA ACUMULADA -->
+
+        <iframe
+            id="grafico_distancia_acumulada"
+            src="../../graficos/distancia_acumulada/cbo/cbo_vitoria.html">
+        </iframe>
+
+
+        <!-- DISTÂNCIA PONTO A PONTO -->
+
+        <iframe
+            id="grafico_distancia"
+            src="../../graficos/distancia/cbo/cbo_vitoria.html">
+        </iframe>
+
+
+    </div>
+
 
 </section>
 

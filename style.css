@@ -186,3 +186,145 @@ p {
     display: block;
 
 }
+
+/* =========================
+   MENU DE EMBARCAÇÕES
+   ========================= */
+
+.fleet-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:70px;
+
+    margin:45px auto;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.menu-item{
+
+    position:relative;
+
+}
+
+.menu-item > a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    display:block;
+
+}
+
+.menu-item > a:hover{
+
+    color:#1CA3EC;
+
+}
+
+
+/* MENU SUSPENSO */
+
+.dropdown{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#08192f;
+
+    min-width:230px;
+
+    max-height:400px;
+
+    overflow-y:auto;
+
+    border:1px solid #1CA3EC;
+
+    border-radius:8px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+
+    z-index:9999;
+
+    padding:8px 0;
+
+}
+
+
+/* APARECE AO PASSAR O MOUSE */
+
+.menu-item:hover .dropdown{
+
+    display:block;
+
+}
+
+
+/* LINKS DAS EMBARCAÇÕES */
+
+.dropdown a{
+
+    display:block;
+
+    padding:10px 16px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:normal;
+
+    white-space:nowrap;
+
+}
+
+.dropdown a:hover{
+
+    background:#123A63;
+
+    color:#1CA3EC;
+
+}
+
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+@media(max-width:700px){
+
+    .fleet-menu{
+
+        gap:10px;
+
+        font-size:18px;
+
+    }
+
+    .menu-item > a{
+
+        padding:10px;
+
+    }
+
+}
