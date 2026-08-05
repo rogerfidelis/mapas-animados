@@ -32,14 +32,22 @@ li a {
 }
 
 .banner {
+
     background-image: url("imagens/offshore-pg-bn.png");
+
     background-size: cover;
     background-position: center;
-    height: 250px;
+
+    min-height: 360px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    margin-top: 80px;
+
+    margin-top:80px;
+
+    position:relative;
 
 }
 
@@ -50,6 +58,188 @@ li a {
     letter-spacing:2px;
     padding:20px 40px;
     border-radius:10px;
+}
+
+.intro {
+
+    max-width:1100px;
+
+    margin:50px auto 30px;
+
+    text-align:center;
+
+}
+
+.intro h2 {
+
+    color:#1CA3EC;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+    letter-spacing:1px;
+
+}
+
+.intro p {
+
+    max-width:1000px;
+
+    margin:15px auto;
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    text-align:center;
+
+}
+
+.hero-content {
+
+    text-align:center;
+
+    max-width:900px;
+
+    padding:40px;
+
+}
+
+.hero-content h1 {
+
+    color:white;
+
+    font-size:48px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content h2 {
+
+    color:white;
+
+    font-size:30px;
+
+    line-height:1.3;
+
+    margin:0 auto 20px;
+
+}
+
+.hero-content p {
+
+    color:white;
+
+    font-size:19px;
+
+    line-height:1.6;
+
+    margin:0 auto;
+
+}
+
+.intelligence {
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+.intelligence h2 {
+
+    color:#1CA3EC;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+.section-subtitle {
+
+    max-width:850px;
+
+    margin:0 auto 40px;
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+.intelligence-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:25px;
+
+}
+
+.intelligence-card {
+
+    background:#123A63;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    text-align:left;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    transition:0.3s;
+
+}
+
+.intelligence-card:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 20px rgba(28,163,236,.25);
+
+}
+
+.intelligence-card h3 {
+
+    color:#1CA3EC;
+
+    font-size:22px;
+
+    margin-top:0;
+
+    margin-bottom:15px;
+
+}
+
+.intelligence-card p {
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin:0;
+
+}
+
+.intelligence-grid {
+
+    grid-template-columns:1fr;
+
 }
 
 p {
@@ -207,6 +397,46 @@ p {
 
     font-weight:bold;
 
+}
+
+.fleet-access {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #08192f;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(28,163,236,.25);
+    border-bottom: 1px solid rgba(28,163,236,.25);
+}
+
+.fleet-access h2 {
+    width: 100%;
+
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    color: #1CA3EC;
+
+    font-size: 26px;
+}
+
+.fleet-access > p {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .menu-item{
