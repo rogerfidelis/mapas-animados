@@ -536,6 +536,75 @@ p {
 
 }
 
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer {
+    margin-top: 80px;
+    background-color: #d4af37;
+    color: white;
+    padding: 35px 8% 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-brand strong {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.footer-brand span {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-contact a:hover {
+    opacity: 0.65;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    font-size: 12px;
+    opacity: 0.55;
+}
 
 /* =========================
    RESPONSIVO
@@ -555,6 +624,16 @@ p {
 
         padding:10px;
 
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contact {
+        align-items: center;
     }
 
 }
