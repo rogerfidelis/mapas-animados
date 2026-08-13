@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>{{NOME}}</title>
+
+<style>
+
+* { box-sizing: border-box;
+} 
+ 
+html,
+
+body{
+
+    margin:0;
+    padding: 0;
+    background:#0B1F3A;
+    font-family:Arial, sans-serif;
+}
+
+/* ========================= 
+ZOOM DA PÁGINA 
+========================= */ 
+
+body { 
+    zoom: 0.60; 
+
+}
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+header{
+
+    height:80px;
+
+    background:#08192f;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:8px 25px;
+
+    border-bottom:2px solid #1CA3EC;
+
+}
+
+.home-button{
+
+    display:block;
+
+    height:65px;
+
+    width:auto;
+
+}
+
+.home-button img{
+
+    height:100%;
+    width:auto;
+
+    display:block;
+
+}
+
+.vessel{
+
+    color:white;
+
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+section{
+
+    width:95%;
+
+    margin:20px auto;
+
+}
+
+
+/* =========================
+   PRIMEIRA LINHA
+   MAPA + INDICADORES
+   ========================= */
+
+.painel-superior{
+
+    display:grid;
+
+    grid-template-columns:3fr 1fr;
+
+    gap:20px;
+
+}
+
+
+/* =========================
+   MAPA
+   ========================= */
+
+#mapa{
+
+    width:100%;
+
+    height:750px;
+
+    border:none;
+
+    display: block;
+
+}
+
+
+/* =========================
+   INDICADORES LATERAIS
+   ========================= */
+
+.indicadores{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+.indicadores iframe{
+
+    width:100%;
+
+    height:365px;
+
+    border:none;
+
+    display: block;
+
+}
+
+
+/* =========================
+   GRÁFICOS INFERIORES
+   ========================= */
+
+.graficos-inferiores{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+    margin-top:30px;
+
+}
+
+
+.graficos-inferiores iframe{
+
+    width:100%;
+
+    height:550px;
+
+    border:none;
+
+    display: block;
+
+}
+
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+@media (max-width:900px){
+
+    header{
+
+        height:auto;
+
+        padding:12px 15px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:5px;
+
+    }
+
+    .home-button{
+
+        height:50px;
+
+    }
+
+    .vessel{
+
+        font-size:16px;
+
+    }
+
+
+    .painel-superior{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    #mapa{
+
+        height:550px;
+
+    }
+
+
+    .indicadores iframe{
+
+        height:500px;
+
+    }
+
+
+    .graficos-inferiores iframe{
+
+        height:500px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <a href="{{HOME}}" class="home-button">
+
+        <img src="{{LOGO}}" alt="OFI">
+
+    </a>
+
+    <div class="vessel">
+
+        {{NOME}}
+
+    </div>
+
+</header>
+
+
+<section>
+
+
+    <!-- =========================
+         MAPA + INDICADORES
+         ========================= -->
+
+    <div class="painel-superior">
+
+
+        <!-- MAPA -->
+
+        <iframe
+            id="mapa"
+            src="{{MAPA}}">
+        </iframe>
+
+
+        <!-- INDICADORES -->
+
+        <div class="indicadores">
+
+            <iframe
+                id="grafico_status"
+                src="{{STATUS}}">
+            </iframe>
+
+
+            <iframe
+                id="grafico_atendimento"
+                src="{{ATENDIMENTO}}">
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         GRÁFICOS DE DISTÂNCIA
+         ========================= -->
+
+    <div class="graficos-inferiores">
+
+        <!-- GRÁFICO DE GANTT -->
+
+        <iframe
+            id="grafico_gantt"
+            src="{{GANTT}}">
+        </iframe>
+
+
+        <!-- DISTÂNCIA ACUMULADA -->
+
+        <iframe
+            id="grafico_distancia_acumulada"
+            src="{{ACUMULADA}}">
+        </iframe>
+
+
+        <!-- DISTÂNCIA PONTO A PONTO -->
+
+        <iframe
+            id="grafico_distancia"
+            src="{{DESLOCAMENTO}}">
+        </iframe>
+
+
+    </div>
+
+
+</section>
+
+
+</body>
+
+</html>

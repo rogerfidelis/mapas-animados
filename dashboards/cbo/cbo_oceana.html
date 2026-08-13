@@ -10,11 +10,26 @@
 
 <style>
 
+* { box-sizing: border-box;
+} 
+ 
+html,
+
 body{
 
     margin:0;
+    padding: 0;
     background:#0B1F3A;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
+}
+
+/* ========================= 
+ZOOM DA PÁGINA 
+========================= */ 
+
+body { 
+    zoom: 0.60; 
+
 }
 
 /* =========================
@@ -33,8 +48,6 @@ header{
     justify-content:space-between;
 
     padding:8px 25px;
-
-    box-sizing:border-box;
 
     border-bottom:2px solid #1CA3EC;
 
@@ -110,6 +123,8 @@ section{
 
     border:none;
 
+    display: block;
+
 }
 
 
@@ -135,6 +150,8 @@ section{
     height:365px;
 
     border:none;
+
+    display: block;
 
 }
 
@@ -163,6 +180,8 @@ section{
     height:550px;
 
     border:none;
+
+    display: block;
 
 }
 
@@ -302,7 +321,7 @@ section{
         <!-- GRÁFICO DE GANTT -->
 
         <iframe
-            id="grafiCO_GANTT"
+            id="grafico_gantt"
             src="../../graficos/gantt_atendimento/cbo/cbo_oceana.html">
         </iframe>
 
