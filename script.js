@@ -2,7 +2,7 @@ const ESTATISTICAS = {
     km: 40714.42,
     empresas: 3,
     psvs: 53,
-    campos: 18
+    campos: 35
 };
 
 document.getElementById("km").dataset.target = ESTATISTICAS.km;
